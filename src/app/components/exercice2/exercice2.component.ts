@@ -8,17 +8,18 @@ import { Component, OnInit } from '@angular/core';
 export class Exercice2Component implements OnInit {
 
 
-  interes: any
-  montoTotal: any
-  cuota: any
+  interes: any = 0;
+  montoTotal: any = 0;
+  cuota: any = 0;
 
   calcular(capital: HTMLInputElement, tasa: HTMLInputElement, periodo: HTMLInputElement) {
 
-    this.interes = parseInt(capital.value) * parseInt(tasa.value) * parseInt(periodo.value)
 
-    this.montoTotal = parseInt(capital.value) + this.interes
+    this.interes = parseInt(capital.value) * parseFloat(tasa.value) * parseInt(periodo.value)
 
-    this.cuota = this.montoTotal / parseInt(periodo.value)
+    this.montoTotal = parseInt(capital.value) + parseInt(this.interes)
+
+    this.cuota = parseInt(this.montoTotal) / parseInt(periodo.value)
 
     return false;
   }
