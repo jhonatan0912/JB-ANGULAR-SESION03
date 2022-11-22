@@ -1,0 +1,11 @@
+.header {
+  background-color: rgb(0, 58, 96);
+  color: #fff;
+  text-align: center;
+  padding: 1em;
+}
+
+.numbers-result {
+  border-left: 4px solid #0062cc;
+  background-color: rgb(152, 215, 240);
+}

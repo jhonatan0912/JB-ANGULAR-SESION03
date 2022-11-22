@@ -1,0 +1,19 @@
+<div class="container">
+  <header>
+    <h4 class="header">CALCULADORA</h4>
+    <div class="row">
+      <div class="col">
+        <input type="number" class="form-control" name="first-number" id="first-number" #firstNumber>
+        <input type="number" class="form-control" name="second-number" id="second-number" #secondNumber>
+      </div>
+      <div class="col numbers-result">
+        <div class="d-flex">
+          <p><b>Number 1:</b> {{firstNum}} </p> &nbsp;&nbsp;
+          <p><b>Number 2:</b> {{secondNum}}</p>
+        </div>
+        <p><b>Resultado:</b> {{result}}</p>
+      </div>
+    </div>
+    <button class="btn btn-success d-block" type="button" (click)="calc(firstNumber,secondNumber)">CALCULAR</button>
+  </header>
+</div>
