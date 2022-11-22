@@ -1,1 +1,26 @@
-<p>exercice2 works!</p>
+<div class="container border mt-5">
+  <form class="d-flex flex-column text-center">
+    <h1>Financiamiento personal</h1>
+    <label for="capital">
+      <p>Capital:</p>
+      <input type="number" name="capital" #capital id="">
+    </label>
+    <label for="tasa">
+      <p>Tasa:</p>
+      <input type="number" name="tasa" #tasa id="">
+    </label>
+    <label for="periodo">
+      <p>Periodo:</p>
+      <input type="number" name="periodo" #periodo id="">
+    </label>
+    <button type="button" class="btn btn-success m-auto d-block"
+      (click)="calcular(capital,tasa,periodo)">Calcular</button>
+
+    <div class="mt-5">
+      <h2>Resultados financiamiento</h2>
+      <p>Interes: {{interes}}</p>
+      <p>Monto total: {{montoTotal}}</p>
+      <p>Cuota {{cuota}}</p>
+    </div>
+  </form>
+</div>
