@@ -1,24 +1,27 @@
-<div class="container">
-  <label for="compra1">
-    <p>Compra 1:</p>
-    <input type="number" name="compra1" #compra1>
-  </label>
-  <label for="compra2">
-    <p>Compra 2:</p>
-    <input type="number" name="compra2" #compra2>
-  </label>
-  <label for="compra3">
-    <p>Compra 3:</p>
-    <input type="number" name="compra3" #compra3>
-  </label>
-  <label for="compra4">
-    <p>Compra 4:</p>
-    <input type="number" name="compra4" #compra4>
-  </label>
+<div class="container border mt5">
+  <form class="d-flex flex-column text-center">
+    <h1>Calculadora ventas:</h1>
+    <label for="compra1">
+      <p>Compra 1:</p>
+      <input type="number" name="compra1" #compra1>
+    </label>
+    <label for="compra2">
+      <p>Compra 2:</p>
+      <input type="number" name="compra2" #compra2>
+    </label>
+    <label for="compra3">
+      <p>Compra 3:</p>
+      <input type="number" name="compra3" #compra3>
+    </label>
+    <label for="compra4">
+      <p>Compra 4:</p>
+      <input type="number" name="compra4" #compra4>
+    </label>
 
-  <button (click)="calcular(compra1,compra2,compra3,compra4)">Calcular</button>
+    <button class="btn btn-success d-block m-auto mt-3" (click)="calcular(compra1,compra2,compra3,compra4)">Calcular</button>
+  </form>
 
-  <div>
+  <div class="text-center mt-5">
     <h2>Resultados</h2>
     <p>Total: {{total}}</p>
     <p>Promedio: {{promedio}}</p>
